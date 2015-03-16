@@ -10,7 +10,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "UMRecorder.h"
 #import <UIKit/UIKit.h>
 
 #define UMFBCheckFinishedNotification @"UMFBCheckFinishedNotification"
@@ -40,7 +39,7 @@
 
 
 #pragma mark - Feedback Object
-@interface UMFeedback : NSObject <RecorderDelegate>
+@interface UMFeedback : NSObject
 
 /**
  *  UMFeedback Data Delegate
@@ -157,11 +156,6 @@
 
 // 推送相关
 - (void)setFeedbackViewController:(UIViewController *)controller shouldPush:(BOOL)shouldPush;
-
-// for record and playback
-- (void)stopRecordAndPlayback;
-- (void)playRecordWithReplyId:(NSString *)replyId;
-- (UMRecorder *)getRecorder;
 
 // 不建议使用的
 
